@@ -137,4 +137,5 @@ TW_SUPPORT_INPUT_AIDL_HAPTICS := true
 TW_SUPPORT_INPUT_AIDL_HAPTICS_FQNAME := "IVibrator/vibratorfeature"
 TW_CUSTOM_CPU_TEMP_PATH := "/sys/class/thermal/thermal_zone54/temp"
 TARGET_USE_CUSTOM_LUN_FILE_PATH := "/config/usb_gadget/g1/functions/mass_storage.usb0/lun.%d/file"
+TW_DEVICE_VERSION := Marve1ous
 
