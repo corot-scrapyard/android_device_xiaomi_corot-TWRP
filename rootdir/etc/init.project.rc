@@ -163,8 +163,8 @@ service vendor_tcpdump /vendor/bin/tcpdump-vendor -i any -W 3 -C 5 -s 134 -w /da
        group root wifi
        disabled
        oneshot
-on property:sys.user.0.ce_available=true
-    start vendor_tcpdump
+#on property:sys.user.0.ce_available=true
+#    start vendor_tcpdump
 
 # wifi-add: start/stop wlan logs service
 on property:persist.vendor.tcpdump.enable=true
@@ -175,6 +175,12 @@ on property:persist.vendor.tcpdump.enable=false
 
 on property:persist.sys.cota.carrier=OR
     stop vendor_tcpdump
+
+on property:persist.vendor.connsysfw.enable=true
+    start connsyslogger
+
+on property:persist.vendor.connsysfw.enable=false && property:vendor.connsysfw.running=0
+    stop connsyslogger
 
 # Sync headtrack status between system and vendor
 on property:sys.spatial.headtrack=*

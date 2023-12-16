@@ -1191,6 +1191,9 @@ on property:persist.vendor.mediatek.charger.log.enable=1
     write /sys/module/pd_dbg_info/parameters/dbg_log_en 1
     write /sys/module/mt6375_charger/parameters/dbg_log_en 1
 
+on property:ro.boot.crash_reason=*
+  setprop vendor.minidump.crash_reason ${ro.boot.crash_reason}
+
 # MSYNC Game
 on boot
     insmod /vendor/lib/modules/msync2_dms.ko
