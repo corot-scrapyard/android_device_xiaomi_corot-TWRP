@@ -1,0 +1,9 @@
+<manifest version="1.0" type="device">
+    <hal format="aidl">
+        <name>android.hardware.neuralnetworks</name>
+        <version>4</version>
+        <fqname>IDevice/mtk-dsp_shim</fqname>
+        <fqname>IDevice/mtk-mdla_shim</fqname>
+        <fqname>IDevice/mtk-neuron_shim</fqname>
+    </hal>
+</manifest>
