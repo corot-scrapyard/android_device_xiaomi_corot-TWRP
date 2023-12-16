@@ -52,6 +52,9 @@ TARGET_USES_LOGD := true
 TARGET_INIT_VENDOR_LIB := libinit_corot
 TARGET_RECOVERY_DEVICE_MODULES := libinit_corot
 
+# Fstab
+TARGET_RECOVERY_FSTAB := $(DEVICE_PATH)/recovery/root/system/etc/recovery.fstab
+
 # Kernel
 BOARD_BOOT_HEADER_VERSION := 4
 BOARD_KERNEL_CMDLINE := bootopt=64S3,32N2,64N2
