@@ -1,10 +1,8 @@
 service miteelog /vendor/bin/miteelog
     class core
-    user root
-    group root
+    user system
+    group system
     disabled
-    oneshot
-    seclabel u:r:recovery:s0
 
 on post-fs-data
     mkdir /data/vendor/mitee
@@ -15,4 +13,3 @@ on post-fs-data
     chown system system /data/vendor/thh
     write /proc/bootprof "init miteelog"
     start miteelog
-    
