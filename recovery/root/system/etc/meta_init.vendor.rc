@@ -1,0 +1,13 @@
+# Copyright (C) 2012 The Android Open Source Project
+#
+# IMPORTANT: Do not create world writable files or directories.
+# This is a common source of Android security bugs.
+#
+
+import /vendor/etc/init/android.hardware.keymaster@4.1-service.mtee.rc
+import /vendor/etc/init/android.hardware.security.keymint-service.trustonic.rc
+import /vendor/etc/init/android.hardware.security.keymint@2.0-service.trustonic.rc
+import /vendor/etc/init/android.hardware.security.keymint-service.beanpod.rc
+import /vendor/etc/init/android.hardware.security.keymint.mitee@2.0-service.rc
+
+import /vendor/etc/init/hw/meta_init.rc
